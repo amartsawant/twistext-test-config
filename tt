@@ -1,0 +1,175 @@
+{
+  "appConfig": {
+    "minVersion": "1.2.0",
+    "latestVersion": "1.3.0",
+    "forceUpgrade": false,
+    "updateUrl": "https://apps.apple.com/app/id1234567890"
+  },
+  "features": {
+    "encryptOptions": true,
+    "decryptMessages": true,
+    "morseCode": true,
+    "morseAudioPlayback": true,
+    "morseAudioImport": true,
+    "textReverse": true,
+    "privateMessaging": true,
+    "matrixMessages": true,
+    "invisibleText": true,
+    "funMessages": true,
+    "pairing": true,
+    "scanQr": true,
+    "myQr": true,
+    "pairedUsers": true,
+    "backup": true,
+    "restore": true,
+    "biometricUnlock": true,
+    "notificationsCenter": true,
+    "subscription": true,
+    "changeUsername": true,
+    "changePasscode": true,
+    "morseSettings": true,
+    "about": true,
+    "debugBackupRestore": true,
+    "hieroglyphMode": false,
+    "futureExperimentalMode": false
+  },
+  "notifications": [
+    {
+      "id": "feature-private-messaging",
+      "type": "feature",
+      "title": "Private messaging",
+      "message": "Try private messages with your contacts",
+      "featureKey": "privateMessaging",
+      "targetScreen": "EncryptOptions",
+      "targetParams": {},
+      "priority": 10
+    },
+    {
+      "id": "feature-morse-code",
+      "type": "feature",
+      "title": "Morse code",
+      "message": "Create playable Morse messages with sound and sharing.",
+      "featureKey": "morseCode",
+      "targetScreen": "MorseEncode",
+      "targetParams": {},
+      "priority": 9
+    },
+    {
+      "id": "feature-text-reverse",
+      "type": "feature",
+      "title": "Text reverse",
+      "message": "Flip and reverse text for quick fun messages.",
+      "featureKey": "textReverse",
+      "targetScreen": "TextStyle",
+      "targetParams": {},
+      "priority": 8
+    },
+    {
+      "id": "feature-matrix",
+      "type": "feature",
+      "title": "Matrix code",
+      "message": "Generate plain, colored, or Minecraft-style matrix messages.",
+      "featureKey": "matrixMessages",
+      "targetScreen": "SelectRecipient",
+      "targetParams": {
+        "nextScreen": "MatrixEncrypt"
+      },
+      "priority": 8
+    },
+    {
+      "id": "feature-invisible-text",
+      "type": "feature",
+      "title": "Invisible text",
+      "message": "Hide messages inside normal-looking text.",
+      "featureKey": "invisibleText",
+      "targetScreen": "SelectRecipient",
+      "targetParams": {
+        "nextScreen": "InvisibleStego"
+      },
+      "priority": 7
+    },
+    {
+      "id": "feature-pairing",
+      "type": "feature",
+      "title": "Pair with a contact",
+      "message": "Open the scanner and connect with another device.",
+      "featureKey": "pairing",
+      "targetScreen": "ScanQr",
+      "targetParams": {
+        "startActive": true
+      },
+      "priority": 7
+    },
+    {
+      "id": "feature-backup",
+      "type": "feature",
+      "title": "Backup tools",
+      "message": "Create an encrypted backup of your account data.",
+      "featureKey": "backup",
+      "targetScreen": "BackupAccount",
+      "targetParams": {},
+      "priority": 6
+    },
+    {
+      "id": "feature-restore",
+      "type": "feature",
+      "title": "Restore tools",
+      "message": "Restore your account from a secure backup code.",
+      "featureKey": "restore",
+      "targetScreen": "RestoreAccount",
+      "targetParams": {},
+      "priority": 6
+    },
+    {
+      "id": "feature-settings",
+      "type": "feature",
+      "title": "Settings",
+      "message": "Manage Morse settings, passcode, biometrics, and more.",
+      "featureKey": "morseSettings",
+      "targetScreen": "Settings",
+      "targetParams": {},
+      "priority": 4
+    },
+    {
+      "id": "promo-app-1",
+      "type": "promo_app",
+      "title": "From us",
+      "message": "A new app you might find useful",
+      "link": "https://apps.apple.com/app/id123",
+      "priority": 5
+    },
+    {
+      "id": "info-paired-users",
+      "type": "info",
+      "title": "Paired contacts",
+      "message": "Saved contacts appear in Paired Users after successful pairing.",
+      "priority": 3
+    },
+    {
+      "id": "info-welcome",
+      "type": "info",
+      "title": "Welcome",
+      "message": "You can now check updates anytime from the bell icon.",
+      "expiresAt": "2026-12-31T23:59:59.000Z",
+      "minAppVersion": "0.0.1",
+      "priority": 1
+    },
+    {
+      "id": "info-targeted-version",
+      "type": "info",
+      "title": "Version-targeted message",
+      "message": "This notification is visible only for selected app versions.",
+      "minAppVersion": "0.0.1",
+      "maxAppVersion": "9.9.9",
+      "priority": 1
+    },
+    {
+      "id": "info-expired-example",
+      "type": "info",
+      "title": "Expired example",
+      "message": "This should disappear automatically after the expiry date.",
+      "expiresAt": "2025-01-01T00:00:00.000Z",
+      "priority": 0
+    }
+  ]
+}
